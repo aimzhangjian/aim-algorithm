@@ -43,15 +43,15 @@ public class SortTest {
         arrayStr = bufferedReader.readLine();
 
         String[] arrays = arrayStr.split(" ");
-        int[] input = Arrays.stream(arrays).mapToInt(array -> Integer.valueOf(array)).toArray();
-        int[] result = insertionSort.sort(input);
+        Integer[] input = (Integer[]) Arrays.stream(arrays).map(array -> Integer.valueOf(array)).toArray();
+        Integer[] result = insertionSort.sort(input);
         Arrays.stream(result).forEach(rsl -> System.out.println(rsl));
     }
 
 
     public void mergeSort(){
-        int[] input = {1,4,3,6,3,1,5,32};
-        int[] result = mergeSort.sort(input);
+        Integer[] input = {1,4,3,6,3,1,5,32};
+        Integer[] result = mergeSort.sort(input);
         System.out.println(result);
     }
 
@@ -64,9 +64,9 @@ public class SortTest {
             arrayStr = scan.nextLine();
         }
         String[] arrays = arrayStr.split(" ");
-        int[] input = Arrays.stream(arrays).mapToInt(array -> Integer.valueOf(array)).toArray();
+        Integer[] input = (Integer[]) Arrays.stream(arrays).map(array -> Integer.valueOf(array)).toArray();
 
-        int[] result = heapSort.sort(input);
+        Integer[] result = heapSort.sort(input);
         Arrays.stream(result).forEach(rsl -> System.out.println(rsl));
     }
 }

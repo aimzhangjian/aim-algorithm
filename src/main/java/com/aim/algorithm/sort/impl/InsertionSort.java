@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 public class InsertionSort implements Sort {
 
     @Override
-    public int[] sort(int[] input) {
+    public Integer[] sort(Integer[] input) {
         int key;
         int i;
         for(int j = 1; j < input.length; j++){

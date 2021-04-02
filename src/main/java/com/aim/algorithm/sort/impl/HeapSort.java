@@ -4,11 +4,11 @@ import com.aim.algorithm.sort.Sort;
 
 public class HeapSort implements Sort {
     @Override
-    public int[] sort(int[] input) {
+    public Integer[] sort(Integer[] input) {
         return heapSort(input);
     }
 
-    private void maxHeapify(int[] input, int heapSize, int i) {
+    public void maxHeapify(Integer[] input, int heapSize, int i) {
         int l = 2 * i + 1;
         int r = 2 * i + 2;
         int largest = i;
@@ -27,13 +27,13 @@ public class HeapSort implements Sort {
     }
 
 
-    private void buildMaxHeap(int[] input) {
+    public void buildMaxHeap(Integer[] input) {
         for (int i = input.length / 2 - 1; i >= 0; i--) {
             maxHeapify(input, input.length, i);
         }
     }
 
-    private int[] heapSort(int[] input) {
+    public Integer[] heapSort(Integer[] input) {
         int heapSize = input.length;
         buildMaxHeap(input);
         for (int i = input.length - 1; i >= 1; i--) {

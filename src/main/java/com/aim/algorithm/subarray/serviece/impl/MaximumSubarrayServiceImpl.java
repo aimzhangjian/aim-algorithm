@@ -4,11 +4,11 @@ import com.aim.algorithm.subarray.entity.MaximumSubarray;
 import com.aim.algorithm.subarray.serviece.MaximumSubarrayService;
 
 public class MaximumSubarrayServiceImpl implements MaximumSubarrayService {
-    public MaximumSubarray findMaximumSubarray(int[] input) {
+    public MaximumSubarray findMaximumSubarray(Integer[] input) {
         return findMaximumSubarray(input, 0, input.length - 1);
     }
 
-    public MaximumSubarray findMaximumSubarray(int[] input, int low, int high) {
+    public MaximumSubarray findMaximumSubarray(Integer[] input, int low, int high) {
         if (high == low) {
             return new MaximumSubarray(low, high, input[low]);
         } else {
@@ -28,7 +28,7 @@ public class MaximumSubarrayServiceImpl implements MaximumSubarrayService {
         }
     }
 
-    private MaximumSubarray findMaxCrossingSubarray(int[] input, int low, int mid, int high) {
+    private MaximumSubarray findMaxCrossingSubarray(Integer[] input, int low, int mid, int high) {
         int leftSum = Integer.MIN_VALUE;
         int sum = 0;
         int maxLeft = -1;

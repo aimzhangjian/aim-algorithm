@@ -6,12 +6,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class MergeSort implements Sort {
     @Override
-    public Integer[] sort(Integer[] input) {
+    public int[] sort(int[] input) {
         mergeSort(input, 0, input.length-1);
         return input;
     }
 
-    public void mergeSort(Integer[] input, int start, int end){
+    public void mergeSort(int[] input, int start, int end){
         if(start < end){
             int mid = (int) Math.floor(((double) start + end)/2);
             mergeSort(input, start, mid);
@@ -20,11 +20,11 @@ public class MergeSort implements Sort {
         }
     }
 
-    private void merge(Integer[] input, int start, int mid, int end){
+    private void merge(int[] input, int start, int mid, int end){
         int l = mid - start + 1;
         int r = end - mid;
-        Integer[] left = new Integer[l + 1];
-        Integer[] right = new Integer[r + 1];
+        int[] left = new int[l + 1];
+        int[] right = new int[r + 1];
         for(int i = 0; i < l; i++){
             left[i] = input[start + i];
         }

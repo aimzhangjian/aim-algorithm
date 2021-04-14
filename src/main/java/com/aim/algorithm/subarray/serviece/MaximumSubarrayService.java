@@ -8,5 +8,5 @@ public interface MaximumSubarrayService {
      * @param input
      * @return
      */
-     MaximumSubarray findMaximumSubarray(Integer[] input);
+     MaximumSubarray findMaximumSubarray(int[] input);
 }

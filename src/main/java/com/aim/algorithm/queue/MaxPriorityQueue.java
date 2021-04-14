@@ -11,7 +11,7 @@ import java.util.Queue;
 public class MaxPriorityQueue implements Queue {
     private final HeapSort heapSort = new HeapSort();
 
-    private Integer[] queue;
+    private int[] queue;
     private int size;
 
     @Override
@@ -101,12 +101,12 @@ public class MaxPriorityQueue implements Queue {
         }
         int result = this.queue[0];
         this.queue[0] = this.queue[--size];
-        this.queue[size] = null;
+        this.queue[size] = -1;
         heapSort.maxHeapify(this.queue, size, 0);
         return result;
     }
 
-    public void increase(int i, Integer value) {
+    public void increase(int i, int value) {
         if (value < this.queue[i]) {
             throw new RuntimeException("new value is small than current value");
         }
@@ -127,7 +127,7 @@ public class MaxPriorityQueue implements Queue {
                     (queue.length >>> 1)));
         }
         this.queue[++size] = Integer.MIN_VALUE;
-        increase(size, (Integer) value);
+        increase(size, (int) value);
         return true;
     }
 }

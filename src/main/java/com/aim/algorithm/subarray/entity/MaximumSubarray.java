@@ -1,9 +1,9 @@
 package com.aim.algorithm.subarray.entity;
 
 public class MaximumSubarray {
-    private Integer startIndex;
-    private Integer endIndex;
-    private Integer sum;
+    private int startIndex;
+    private int endIndex;
+    private int sum;
 
     public MaximumSubarray(){}
 
@@ -13,27 +13,27 @@ public class MaximumSubarray {
         this.sum = sum;
     }
 
-    public Integer getStartIndex() {
+    public int getStartIndex() {
         return startIndex;
     }
 
-    public void setStartIndex(Integer startIndex) {
+    public void setStartIndex(int startIndex) {
         this.startIndex = startIndex;
     }
 
-    public Integer getEndIndex() {
+    public int getEndIndex() {
         return endIndex;
     }
 
-    public void setEndIndex(Integer endIndex) {
+    public void setEndIndex(int endIndex) {
         this.endIndex = endIndex;
     }
 
-    public Integer getSum() {
+    public int getSum() {
         return sum;
     }
 
-    public void setSum(Integer sum) {
+    public void setSum(int sum) {
         this.sum = sum;
     }
 

@@ -29,7 +29,7 @@ public class MaximumSubarrayTest {
             arrayStr = scan.nextLine();
         }
         String[] arrays = arrayStr.split(" ");
-        Integer[] input = Arrays.stream(arrays).mapToInt(array -> Integer.valueOf(array)).toArray();
+        int[] input = Arrays.stream(arrays).mapToInt(array -> Integer.valueOf(array)).toArray();
 
         MaximumSubarray maximumSubarray =  maximumSubarrayService.findMaximumSubarray(input);
         System.out.println(maximumSubarray.toString());
